@@ -1,6 +1,6 @@
-================================================================================
+--------------------------------------------------------------------------------
 SENTINEL SDK
-================================================================================
+--------------------------------------------------------------------------------
 
 A runtime SDK that detects whether an app is being tampered with, debugged,
 or subjected to reverse engineering.
@@ -13,31 +13,6 @@ Sentinel is meant to be embedded in an application and run at runtime to
 help the host app notice when its environment or integrity is being
 interfered with. This repository contains the SDK library itself plus a
 sample application module for exercising it.
-
-
---------------------------------------------------------------------------------
-PROJECT STRUCTURE
---------------------------------------------------------------------------------
-
-sentinel-sdk/
-|-- app/                 Sample/host application used to exercise the SDK
-|-- sdk/
-|   `-- sentinel/        The Sentinel SDK library module
-  |-- gradle/              Gradle wrapper files and shared configuration
-  |-- build.gradle.kts     Root build script
-  |-- settings.gradle.kts  Declares the modules below
-  |-- gradle.properties    Gradle project properties
-  |-- gradlew              Gradle wrapper (Linux / macOS)
-  |-- gradlew.bat          Gradle wrapper (Windows)
-  `-- README.txt           This file
-
-Gradle modules (from settings.gradle.kts):
-
-:app              Sample application
-:sdk:sentinel     The SDK library
-
-The root Gradle project is named "sentinel".
-
 
 --------------------------------------------------------------------------------
 REQUIREMENTS
