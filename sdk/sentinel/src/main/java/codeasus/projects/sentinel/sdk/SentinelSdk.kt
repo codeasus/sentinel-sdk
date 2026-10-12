@@ -139,7 +139,6 @@ object TapjackingGuard {
 // ---------------------------------------------------------------------------
 // 4. Environment checks: Build-class checks stay here since they read
 // Android system properties instead of files. Root and busybox checks
-// moved to SentinelSdk to avoid libc hooking (see note above).
 // ---------------------------------------------------------------------------
 object EnvironmentChecks {
 
