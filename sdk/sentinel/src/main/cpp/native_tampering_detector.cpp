@@ -10,7 +10,6 @@
 // one data point for a server-side risk score—never rely on them as a standalone
 // pass/fail gate on the client side.
 
-
 // Note: Some help from a LLM model has been used to develop this native library but it is mostly a honest work, haha...
 // While I can read and write C++ from basic to mediocre level, I am no expert!
 // Additionally, not all of these methods have been tested due to time constraints, the time it takes to setup different mobile environments, lack of different devices and so on.
@@ -575,15 +574,15 @@ bool nativeRoDebuggableSet() {
 
 extern "C" {
 
-JNIEXPORT jboolean JNICALL Java_codeasus_projects_sentinel_sdk_SentinelSdk_isTraced(JNIEnv *, jobject) {
+JNIEXPORT jboolean JNICALL Java_codeasus_projects_sentinel_sdk_NativeTamperingDetector_isTraced(JNIEnv *, jobject) {
     return nativeIsTraced() ? JNI_TRUE : JNI_FALSE;
 }
 
-JNIEXPORT jboolean JNICALL Java_codeasus_projects_sentinel_sdk_SentinelSdk_mapsContainFrida(JNIEnv *, jobject) {
+JNIEXPORT jboolean JNICALL Java_codeasus_projects_sentinel_sdk_NativeTamperingDetector_mapsContainFrida(JNIEnv *, jobject) {
     return nativeMapsContainFrida() ? JNI_TRUE : JNI_FALSE;
 }
 
-JNIEXPORT jboolean JNICALL Java_codeasus_projects_sentinel_sdk_SentinelSdk_hasSuspiciousThreads(JNIEnv *, jobject) {
+JNIEXPORT jboolean JNICALL Java_codeasus_projects_sentinel_sdk_NativeTamperingDetector_hasSuspiciousThreads(JNIEnv *, jobject) {
     return nativeHasSuspiciousThreads() ? JNI_TRUE : JNI_FALSE;
 }
 
@@ -594,56 +593,56 @@ JNIEXPORT jboolean JNICALL Java_codeasus_projects_sentinel_sdk_SentinelSdk_dlMap
     return result ? JNI_TRUE : JNI_FALSE;
 }
 
-JNIEXPORT jboolean JNICALL Java_codeasus_projects_sentinel_sdk_SentinelSdk_isAlreadyTraced(JNIEnv *, jobject) {
+JNIEXPORT jboolean JNICALL Java_codeasus_projects_sentinel_sdk_NativeTamperingDetector_isAlreadyTraced(JNIEnv *, jobject) {
     return nativeIsAlreadyTraced() ? JNI_TRUE : JNI_FALSE;
 }
 
-JNIEXPORT jboolean JNICALL Java_codeasus_projects_sentinel_sdk_SentinelSdk_hasExecutableAnonRegion(JNIEnv *, jobject) {
+JNIEXPORT jboolean JNICALL Java_codeasus_projects_sentinel_sdk_NativeTamperingDetector_hasExecutableAnonRegion(JNIEnv *, jobject) {
     return nativeHasExecutableAnonRegion() ? JNI_TRUE : JNI_FALSE;
 }
 
-JNIEXPORT jboolean JNICALL Java_codeasus_projects_sentinel_sdk_SentinelSdk_environContainsFrida(JNIEnv *, jobject) {
+JNIEXPORT jboolean JNICALL Java_codeasus_projects_sentinel_sdk_NativeTamperingDetector_environContainsFrida(JNIEnv *, jobject) {
     return nativeEnvironContainsFrida() ? JNI_TRUE : JNI_FALSE;
 }
 
-JNIEXPORT jboolean JNICALL Java_codeasus_projects_sentinel_sdk_SentinelSdk_unixSocketsSuspicious(JNIEnv *, jobject) {
+JNIEXPORT jboolean JNICALL Java_codeasus_projects_sentinel_sdk_NativeTamperingDetector_unixSocketsSuspicious(JNIEnv *, jobject) {
     return nativeUnixSocketsSuspicious() ? JNI_TRUE : JNI_FALSE;
 }
 
-JNIEXPORT jboolean JNICALL Java_codeasus_projects_sentinel_sdk_SentinelSdk_mapsReadMismatch(JNIEnv *, jobject) {
+JNIEXPORT jboolean JNICALL Java_codeasus_projects_sentinel_sdk_NativeTamperingDetector_mapsReadMismatch(JNIEnv *, jobject) {
     return nativeMapsReadMismatch() ? JNI_TRUE : JNI_FALSE;
 }
 
-JNIEXPORT jboolean JNICALL Java_codeasus_projects_sentinel_sdk_SentinelSdk_anyPortSpeaksFridaProtocol(JNIEnv *, jobject) {
+JNIEXPORT jboolean JNICALL Java_codeasus_projects_sentinel_sdk_NativeTamperingDetector_anyPortSpeaksFridaProtocol(JNIEnv *, jobject) {
     return nativeAnyPortSpeaksFridaProtocol() ? JNI_TRUE : JNI_FALSE;
 }
 
-JNIEXPORT jboolean JNICALL Java_codeasus_projects_sentinel_sdk_SentinelSdk_anyLoadedLibraryExportsGumSymbols(JNIEnv *, jobject) {
+JNIEXPORT jboolean JNICALL Java_codeasus_projects_sentinel_sdk_NativeTamperingDetector_anyLoadedLibraryExportsGumSymbols(JNIEnv *, jobject) {
     return nativeAnyLoadedLibraryExportsGumSymbols() ? JNI_TRUE : JNI_FALSE;
 }
 
-JNIEXPORT jboolean JNICALL Java_codeasus_projects_sentinel_sdk_SentinelSdk_suspiciousFds(JNIEnv *, jobject) {
+JNIEXPORT jboolean JNICALL Java_codeasus_projects_sentinel_sdk_NativeTamperingDetector_suspiciousFds(JNIEnv *, jobject) {
     return nativeSuspiciousFds() ? JNI_TRUE : JNI_FALSE;
 }
 
-JNIEXPORT jboolean JNICALL Java_codeasus_projects_sentinel_sdk_SentinelSdk_looksRooted(JNIEnv *, jobject) {
+JNIEXPORT jboolean JNICALL Java_codeasus_projects_sentinel_sdk_NativeTamperingDetector_looksRooted(JNIEnv *, jobject) {
     return nativeLooksRooted() ? JNI_TRUE : JNI_FALSE;
 }
 
-JNIEXPORT jboolean JNICALL Java_codeasus_projects_sentinel_sdk_SentinelSdk_busyboxPresent(JNIEnv *, jobject) {
+JNIEXPORT jboolean JNICALL Java_codeasus_projects_sentinel_sdk_NativeTamperingDetector_busyboxPresent(JNIEnv *, jobject) {
     return nativeBusyboxPresent() ? JNI_TRUE : JNI_FALSE;
 }
 
-JNIEXPORT jboolean JNICALL Java_codeasus_projects_sentinel_sdk_SentinelSdk_usbConnected(JNIEnv*, jobject) {
+JNIEXPORT jboolean JNICALL Java_codeasus_projects_sentinel_sdk_NativeTamperingDetector_usbConnected(JNIEnv*, jobject) {
     return nativeUsbConnected() ? JNI_TRUE : JNI_FALSE;
 }
 
-JNIEXPORT jboolean JNICALL Java_codeasus_projects_sentinel_sdk_SentinelSdk_roDebuggableSet(JNIEnv*, jobject) {
+JNIEXPORT jboolean JNICALL Java_codeasus_projects_sentinel_sdk_NativeTamperingDetector_roDebuggableSet(JNIEnv*, jobject) {
     return nativeRoDebuggableSet() ? JNI_TRUE : JNI_FALSE;
 }
 
 // Aggregate score, mirroring the Kotlin-side TamperDetector weights so, native and JVM signals can be combined server-side into one payload.
-JNIEXPORT jint JNICALL Java_codeasus_projects_sentinel_sdk_SentinelSdk_checkSuspiciousActivities(JNIEnv *, jobject) {
+JNIEXPORT jint JNICALL Java_codeasus_projects_sentinel_sdk_NativeTamperingDetector_checkSuspiciousActivities(JNIEnv *, jobject) {
     int score = 0;
     if (nativeIsTraced()) score += 3;
     if (nativeMapsContainFrida()) score += 5;

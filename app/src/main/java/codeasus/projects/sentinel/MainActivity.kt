@@ -10,29 +10,25 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import codeasus.projects.sentinel.sdk.SentinelSdk
 import codeasus.projects.sentinel.ui.theme.SentinelTheme
 
-class MainActivity : ComponentActivity() {
+import codeasus.projects.sentinel.sdk.check
 
-    companion object {
-        init {
-            System.loadLibrary("sentinel")
-        }
-    }
+class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        val score = SentinelSdk.checkSuspiciousActivities()
-        val messageFromSdk = "Sentinel SDK Score: $score"
+        // Well, the checking, reporting model can be improved, updated, it is the easiest part
+        // I suppose you get the logic here, a single entrance method for all the checks and reports
+        val sentinelSdkReport = check(this)
 
         setContent {
             SentinelTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
-                        name = messageFromSdk,
+                        name = "Hey",
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -44,7 +40,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
-        text = "Hello $name!",
+        text = name,
         modifier = modifier
     )
 }

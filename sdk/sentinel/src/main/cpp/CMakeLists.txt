@@ -27,7 +27,8 @@ project("sentinel")
 # used in the AndroidManifest.xml file.
 add_library(${CMAKE_PROJECT_NAME} SHARED
     # List C/C++ source files with relative paths to this CMakeLists.txt.
-    sentinel.cpp)
+        native_tampering_detector.cpp
+        native_network_interceptor.cpp)
 
 # Specifies libraries CMake should link to your target library. You
 # can link libraries from various origins, such as libraries defined in this
