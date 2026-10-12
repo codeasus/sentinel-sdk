@@ -29,7 +29,6 @@ Dependencies are resolved from:
 - Google Maven (google())
 - Maven Central (mavenCentral())
 
-
 --------------------------------------------------------------------------------
 GETTING STARTED
 --------------------------------------------------------------------------------
@@ -56,7 +55,6 @@ GETTING STARTED
 You can also open the project in Android Studio and run the "app"
 configuration directly.
 
-
 --------------------------------------------------------------------------------
 USING THE SDK IN YOUR OWN PROJECT
 --------------------------------------------------------------------------------
@@ -73,10 +71,6 @@ implementation(project(":sdk:sentinel"))
 
 Initialization and API usage examples:
 
-[TODO: Add the SDK's entry point and example calls here once the public
-API is finalized.]
-
-
 --------------------------------------------------------------------------------
 WHAT SENTINEL IS INTENDED TO DETECT
 --------------------------------------------------------------------------------
@@ -84,9 +78,6 @@ WHAT SENTINEL IS INTENDED TO DETECT
 - Tampering with the application
 - Debugger attachment
 - Reverse-engineering activity
-
-[TODO: List the specific checks implemented in the SDK.]
-
 
 --------------------------------------------------------------------------------
 IMPORTANT NOTE
@@ -97,14 +88,12 @@ attackers can often bypass client-side checks, so combine Sentinel with
 other measures (code obfuscation, server-side validation, secure storage,
 etc.) rather than relying on it alone.
 
-
 --------------------------------------------------------------------------------
 CONTRIBUTING
 --------------------------------------------------------------------------------
 
 Issues and pull requests are welcome via GitHub:
 https://github.com/codeasus/sentinel-sdk/issues
-
 
 --------------------------------------------------------------------------------
 LICENSE
