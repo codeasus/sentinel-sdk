@@ -2,7 +2,7 @@
 SENTINEL SDK
 --------------------------------------------------------------------------------
 
-A robust runtime SDK for Android that detects application tampering, debugging, reverse engineering, and network interception/sniffing.
+A prototype runtime SDK for Android that detects application tampering, debugging, reverse engineering, and network interception/sniffing.
 
 --------------------------------------------------------------------------------
 OVERVIEW
